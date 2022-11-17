@@ -1,7 +1,16 @@
+import React, {useState} from 'react';
 import './App.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
+import ISSLocation from './components/ISSLocation';
+import MapPoint from './components/MapPoint';
 
 function App() {
+
+  const location = useState({
+    longitude: 0.9999,
+    latitude: 10.9999
+  })
+
   return (
     <div className="App">
       
@@ -10,15 +19,19 @@ function App() {
           <div className="full_screen">
             <div className="full_screen_body"> 
               <main className='container app_container'> 
+                <div className='iss_location bg-danger'> 
+                  <ISSLocation/> 
+                </div>
 
-                <div className='iss_location bg-danger'>  Location of ISS    </div>
+                <div className='data_time bg-success'> Data and time now     </div>
 
-                <div className='iss_location bg-success'> Data and time now     </div>
+                <div className='map_point bg-warning'> Point on map, where ISS  <MapPoint />    </div>
 
-                <div className='iss_location bg-warning'> Point on map, where ISS     </div>
+                <div className='iss_members bg-info'>  Members on ISS    </div>
 
-                <div className='iss_location bg-info'>  Members on ISS    </div>
+                
 
+              
               </main>
             </div>
          
