@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import MapPoint from "./MapPoint";
+// import MapPoint from "./MapPoint";
 
 const ISSLocation = (props) => {
     const [error, setError] = useState(null);
@@ -26,7 +26,8 @@ const ISSLocation = (props) => {
         )
     }, [])
     console.log(`location`, location) // Проверка локации
-    console.log(`props`, props)
+    // let latitude  = location.iss_position.latitude;
+    // let longitude = location.iss_position.longitude;
     
     if (error) {
       return <div>Ошибка: {error.message}</div>;
