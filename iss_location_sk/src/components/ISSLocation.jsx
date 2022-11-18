@@ -6,9 +6,7 @@ const ISSLocation = (props) => {
     const [isLoaded, setIsLoaded] = useState(false);
     const [location, setLocation] = useState([]);
   
-    // Примечание: пустой массив зависимостей [] означает, что
-    // этот useEffect будет запущен один раз
-    // аналогично componentDidMount()
+   
     useEffect(() => {
       fetch("http://api.open-notify.org/iss-now.json")
         .then(res => res.json())
@@ -17,8 +15,7 @@ const ISSLocation = (props) => {
             setIsLoaded(true);
             setLocation(result);
           },
-          // Примечание: важно обрабатывать ошибки именно здесь, а не в блоке catch(),
-          // чтобы не перехватывать исключения из ошибок в самих компонентах.
+
           (error) => {
             setIsLoaded(true);
             setError(error);
