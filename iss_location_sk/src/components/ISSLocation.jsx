@@ -6,33 +6,36 @@ const ISSLocation = (props) => {
     const [isLoaded, setIsLoaded] = useState(false);
     const [location, setLocation] = useState([]);
   
-   
-    useEffect(() => {
-      fetch("http://api.open-notify.org/iss-now.json")
-        .then(res => res.json())
-        .then(
-          (result) => {
-            setIsLoaded(true);
-            setLocation(result);
-          },
-
-          (error) => {
-            setIsLoaded(true);
-            setError(error);
-          }
-        )
-    }, [])
-    console.log(`location`, location) // Проверка локации
-    console.log(`props`, props)
     
+      useEffect(() => {
+        fetch("http://api.open-notify.org/iss-now.json")
+          .then(res => res.json())
+          .then(
+            (result) => {
+              setIsLoaded(true);
+              setLocation(result);
+            },
+
+            (error) => {
+              setIsLoaded(true);
+              setError(error);
+            }
+          )
+      }, [])
+    
+      setInterval(
+        () => console.log(`location in mount`, location),
+        5000);
+
+
     if (error) {
-      return <div>Ошибка: {error.message}</div>;
+      return <div className="text-center pt-2">Ошибка: {error.message}</div>;
     } else if (!isLoaded) {
-      return <div>Загрузка...</div>;
+      return <div className="text-center pt-2" > </div>;
     } else {
 
         return(
-            <div className="text-center mt-2"> 
+            <div className="text-center pt-2"> 
                <h3> ISS location </h3>
                <p> 
                 <strong> Latitude: </strong> {location.iss_position.latitude} 
