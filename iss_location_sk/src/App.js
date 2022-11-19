@@ -4,6 +4,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.css';
 import ISSLocation from './components/ISSLocation';
 import MapPoint from './components/MapPoint';
 import DateTime from './components/DateTime';
+import MembersTeam from './components/MembersTeam';
 
 function App() {
 
@@ -28,7 +29,7 @@ function App() {
 
                 <div className='map_point bg-warning'> Point on map, where ISS  <MapPoint />    </div>
 
-                <div className='iss_members bg-info'>  Members on ISS    </div>
+                <div className='iss_members bg-info'>  Members on ISS <MembersTeam/>   </div>
 
                 
 
