@@ -11,7 +11,7 @@ class DateTime extends React.Component {
     componentDidMount() {
       this.timerID = setInterval(
         () => [this.tick(),  this.today()],
-        1000
+        5000
       );
       // дата обновляется каждую секунду с временем
     }
@@ -30,8 +30,6 @@ class DateTime extends React.Component {
       this.setState({
         date: new Date().toLocaleString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })
       })
-      
-      /*// console.log(`this.state.date`, this.state.date) */
     }
   
     render() {

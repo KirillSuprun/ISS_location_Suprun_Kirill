@@ -3,7 +3,8 @@ import './App.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
 import ISSLocation from './components/ISSLocation';
 import MapPoint from './components/MapPoint';
-import DataTime from './components/DataTime';
+import DateTime from './components/DateTime';
+import MembersTeam from './components/MembersTeam';
 
 function App() {
 
@@ -20,11 +21,11 @@ function App() {
                   <ISSLocation/> 
                 </div>
 
-                <div className='data_time bg-success'> Data and time now  <DataTime        />   </div>
+                <div className='data_time bg-success'> <DateTime        />   </div>
 
                 <div className='map_point bg-warning'> Point on map, where ISS  <MapPoint />     </div>
 
-                <div className='iss_members bg-info'>  Members on ISS    </div>
+                <div className='iss_members bg-info'>  <MembersTeam />    </div>
 
                 
 
