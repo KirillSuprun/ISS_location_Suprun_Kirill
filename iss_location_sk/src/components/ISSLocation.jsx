@@ -29,6 +29,46 @@ const ISSLocation = (props) => {
     // let latitude  = location.iss_position.latitude;
     // let longitude = location.iss_position.longitude;
     
+<<<<<<< Updated upstream
+=======
+      // useEffect(() => {
+      //   setInterval(
+      //     () => fetch("http://api.open-notify.org/iss-now.json")
+      //     .then(res => res.json())
+      //     .then(
+      //       (result) => {
+      //         setIsLoaded(true);
+      //         setLocation(result);
+      //       },
+
+      //       (error) => {
+      //         setIsLoaded(true);
+      //         setError(error);
+      //       }
+      //     )
+      //     ,
+      //     5000)}, [])
+    
+          useEffect(() => {
+            updateISS(() => () => fetch("http://api.open-notify.org/iss-now.json")
+              .then(res => res.json())
+              .then(
+                (result) => {
+                  setIsLoaded(true);
+                  setLocation(result);
+                },
+    
+                (error) => {
+                  setIsLoaded(true);
+                  setError(error);
+                }
+              )
+          )}, [])
+
+          setInterval(() =>updateISS, 5000 )
+      
+
+>>>>>>> Stashed changes
     if (error) {
       return <div>Ошибка: {error.message}</div>;
     } else if (!isLoaded) {
