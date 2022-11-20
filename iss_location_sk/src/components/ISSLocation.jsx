@@ -29,8 +29,8 @@ const ISSLocation = (props) => {
     // let latitude  = location.iss_position.latitude;
     // let longitude = location.iss_position.longitude;
     
-<<<<<<< Updated upstream
-=======
+// <<<<<<< Updated upstream
+// =======
       // useEffect(() => {
       //   setInterval(
       //     () => fetch("http://api.open-notify.org/iss-now.json")
@@ -50,7 +50,7 @@ const ISSLocation = (props) => {
       //     5000)}, [])
     
           useEffect(() => {
-            updateISS(() => () => fetch("http://api.open-notify.org/iss-now.json")
+            updateISS(() => () => fetch("http://api.open-notify.org/iss-now.json") // question.
               .then(res => res.json())
               .then(
                 (result) => {
@@ -65,10 +65,10 @@ const ISSLocation = (props) => {
               )
           )}, [])
 
-          setInterval(() =>updateISS, 5000 )
+          setInterval(() =>updateISS(), 5000 )
       
 
->>>>>>> Stashed changes
+// >>>>>>> Stashed changes
     if (error) {
       return <div>Ошибка: {error.message}</div>;
     } else if (!isLoaded) {
