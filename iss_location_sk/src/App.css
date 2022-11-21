@@ -7,16 +7,12 @@
 
 main.app_container{
   /* max-width: 1400px; */
-  padding: 5rem 1rem;
-  background-color: aqua;
+  padding: 3vh 1vh;
+  /* background-color: aqua; */
   min-height: 100vh;
- 
   display: grid;
-  grid-template-columns: 3fr 1.5fr;
-  grid-template-rows: 0.5fr 3fr;
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
-
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
 }
 
 .full_screen{
@@ -41,4 +37,32 @@ main.app_container{
   object-fit: cover;
 }
 
+.main_component{
+  background: rgba(243, 243, 243, 0.89);
+  border: 1px solid rgb(117, 117, 117);
+  margin: 0.5vh 0 0.5vh;
+  padding: 0.2vh
+}
 
+
+@media (min-width:700px){
+  main.app_container{
+    /* max-width: 1400px; */
+    /* padding: 5rem 1rem; */
+    /* background-color: aqua; */
+    min-height: 100vh;
+   
+    display: grid;
+    grid-template-columns: 3fr 1.5fr;
+    grid-template-rows: 0.5fr 3fr;
+    grid-column-gap: 1vh;
+    grid-row-gap: 0.2vw;
+  }
+
+  .main_component{
+    background: rgba(243, 243, 243, 0.89);
+    border: 1px solid rgb(117, 117, 117);
+    /* margin: 0.5vh 0 0.5vh;
+    padding: 0.2vh */
+  }
+}

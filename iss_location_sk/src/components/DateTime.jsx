@@ -11,7 +11,7 @@ class DateTime extends React.Component {
     componentDidMount() {
       this.timerID = setInterval(
         () => [this.tick(),  this.today()],
-        5000
+        1000
       );
       // дата обновляется каждую секунду с временем
     }
@@ -34,7 +34,7 @@ class DateTime extends React.Component {
   
     render() {
       return (
-        <div style={{fontSize: 'calc(1rem + 0.2vw)'}} className="text-start p-2">
+        <div style={{fontSize: 'calc(1rem + 0.2vw)'}} className="ps-3 d-flex flex-column align-items-start justify-content-center h-100">
            <div > 
                <strong > Current time: </strong>  {this.state.time.toLocaleTimeString()} 
            </div>

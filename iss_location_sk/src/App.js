@@ -6,6 +6,7 @@ import MapPoint from './components/MapPoint';
 import DateTime from './components/DateTime';
 import MembersTeam from './components/MembersTeam';
 
+
 function App() {
 
 
@@ -17,19 +18,23 @@ function App() {
           <div className="full_screen">
             <div className="full_screen_body"> 
               <main className='container app_container'> 
-                <div className='iss_location bg-danger'> 
+
+                <div className='main_component iss_location '> 
                   <ISSLocation/> 
                 </div>
 
-                <div className='data_time bg-success'> <DateTime        />   </div>
+                <div className='main_component data_time '> 
+                  <DateTime        />   
+                </div>
 
-                <div className='map_point bg-warning'> Point on map, where ISS  <MapPoint />     </div>
+                <div className='map main_component map_point '>
+                  <MapPoint />     
+                </div>
 
-                <div className='iss_members bg-info'>  <MembersTeam />    </div>
+                <div className='main_component iss_members '>  
+                  <MembersTeam />    
+                </div>
 
-                
-
-              
               </main>
             </div>
          

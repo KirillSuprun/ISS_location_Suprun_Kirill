@@ -1,0 +1,10 @@
+.member{
+    width: auto;
+    
+    border: 2px solid black;
+    font-size: calc(1rem + 0.2vw);
+    font-weight: 400;
+    padding: calc(0.7rem + 0.2vw);
+    margin: 0.5rem;
+    border-radius: 15px;
+}
