@@ -27,9 +27,9 @@ function App() {
                   <DateTime        />   
                 </div>
 
-                <div className='map main_component map_point '>
-                  <MapPoint />     
-                </div>
+                
+                  <MapPoint  />     
+                
 
                 <div className='main_component iss_members '>  
                   <MembersTeam />    

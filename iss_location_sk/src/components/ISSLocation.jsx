@@ -57,7 +57,7 @@ class ISSLocation extends React.Component {
         } else {
           return (
             <div className="h-100 text-center d-flex flex-column justify-content-center"> 
-               <h3> ISS location </h3>
+               <div style={{fontSize: 'calc(1.2rem + 0.2vw)'}}> <strong> ISS location </strong> </div>
                <div> 
                 <strong> Latitude: </strong> {location.iss_position.latitude} 
                 <strong className="ps-3"> Longitude: </strong> {location.iss_position.longitude}
