@@ -5,7 +5,10 @@
 }
 
 body{
-  background: './assets/bg_iss.jpg';
+  background: url('./assets/bg_iss.jpg');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 main.app_container{
@@ -41,7 +44,7 @@ main.app_container{
 }
 
 .main_component{
-  background: rgba(243, 243, 243, 0.89);
+  background: rgba(243, 243, 243, 0.863);
   border: 1px solid rgb(117, 117, 117);
   margin: 0.5vh 0 0.5vh;
   padding: 0.2vh
@@ -63,7 +66,6 @@ main.app_container{
   }
 
   .main_component{
-    background: rgba(243, 243, 243, 0.89);
     border: 1px solid rgb(117, 117, 117);
     /* margin: 0.5vh 0 0.5vh;
     padding: 0.2vh */

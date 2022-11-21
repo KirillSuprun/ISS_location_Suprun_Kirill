@@ -20,8 +20,8 @@ class ISSLocation extends React.Component {
                 location: result
               });
             },
-            // Примечание: важно обрабатывать ошибки именно здесь, а не в блоке catch(),
-            // чтобы не перехватывать исключения из ошибок в самих компонентах.
+
+            
             (error) => {
               this.setState({
                 isLoaded: true,
@@ -53,7 +53,11 @@ class ISSLocation extends React.Component {
         if (error) {
           return <div>Ошибка: {error.message}</div>;
         } else if (!isLoaded) {
-          return <div>Загрузка...</div>;
+          return <div className="h-100 d-flex flex-column justify-content-center align-items-center" > 
+          <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div> 
+        </div>;
         } else {
           return (
             <div className="h-100 text-center d-flex flex-column justify-content-center"> 

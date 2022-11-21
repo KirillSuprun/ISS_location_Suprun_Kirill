@@ -49,7 +49,11 @@ const MembersTeam = (props) => {
     if (error) {
       return <div className="text-center pt-2">Ошибка: {error.message}</div>;
     } else if (!isLoaded) {
-      return <div className="text-center pt-2" > </div>;
+      return <div className="h-100 d-flex flex-column justify-content-center align-items-center" > 
+                <div class="spinner-border" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div> 
+              </div>;
     } else {
 
         return(

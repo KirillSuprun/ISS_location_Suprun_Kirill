@@ -63,7 +63,11 @@ class MapPoint extends React.Component {
     if (error) {
       return <div>Ошибка: {error.message}</div>;
     } else if (!isLoaded) {
-      return <div>Загрузка...</div>;
+      return <div className="h-100 d-flex flex-column justify-content-center align-items-center" > 
+              <div class="spinner-border text-light" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div> 
+            </div>;;
     } else {
       return (
         <div style={{width: "100%", overflow: "hidden", background: 'rgba(243, 243, 243, 0.89)', border: '1px solid rgb(117, 117, 117)', margin: '0.5vh 0 0.5vh', padding: '0.2vh' }} className="d-flex justify-content-center" >
@@ -76,7 +80,3 @@ class MapPoint extends React.Component {
 
 export default MapPoint;
 
-// background: rgba(243, 243, 243, 0.89);
-//   border: 1px solid rgb(117, 117, 117);
-//   margin: 0.5vh 0 0.5vh;
-//   padding: 0.2vh

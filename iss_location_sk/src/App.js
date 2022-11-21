@@ -12,40 +12,27 @@ function App() {
 
   return (
     <div className="App">
-      
-      <div className='video'> 
+        <main className='container app_container'> 
 
-          <div className="full_screen">
-            <div className="full_screen_body"> 
-              <main className='container app_container'> 
+          <div className='main_component iss_location '> 
+              <ISSLocation/> 
+          </div>
 
-                <div className='main_component iss_location '> 
-                  <ISSLocation/> 
-                </div>
-
-                <div className='main_component data_time '> 
-                  <DateTime        />   
-                </div>
+          <div className='main_component data_time '> 
+              <DateTime        />   
+          </div>
 
                 
-                  <MapPoint  />     
+          <MapPoint  />     
                 
 
-                <div className='main_component iss_members '>  
-                  <MembersTeam />    
-                </div>
+          <div className='main_component iss_members '>  
+            <MembersTeam />    
+          </div>
 
-              </main>
-            </div>
-         
-            <video loop autoPlay muted preload="auto" className="full_screen_video" width="">
-                <source type="video/mp4" src="./assets/StarsVideo.mp4" />
-            </video>
-        </div>
-
-      </div>
-
+        </main>
     </div>
+  
   );
 }
 

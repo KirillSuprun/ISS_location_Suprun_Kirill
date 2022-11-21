@@ -13,7 +13,7 @@ class DateTime extends React.Component {
         () => [this.tick(),  this.today()],
         1000
       );
-      // дата обновляется каждую секунду с временем
+      // дата обновляется каждую секунду вместо со временем
     }
   
     componentWillUnmount() {
